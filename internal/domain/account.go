@@ -14,7 +14,7 @@ type Account struct {
 
 func NewAccount(balance float64) *Account {
 	return &Account{
-		balance:   0,
+		balance:   balance,
 		createdAt: time.Now(),
 		updatedAt: time.Now(),
 	}
