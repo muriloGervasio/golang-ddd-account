@@ -1,9 +1,9 @@
 package main
 
-import "github.com/muriloGervasio/golang-ddd-account/internal/infrastructure"
+import interfaces "github.com/muriloGervasio/golang-ddd-account/internal/interface"
 
 func main() {
-	server := infrastructure.NewServer()
+	server := interfaces.NewServer()
 
 	server.Run()
 }

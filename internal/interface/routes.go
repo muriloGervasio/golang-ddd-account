@@ -1,9 +1,9 @@
-package infrastructure
+package interfaces
 
 import "github.com/gin-gonic/gin"
 
 type Route struct {
-	Method  string
+	Method  HttpMethod
 	Path    string
 	Handler func(c *gin.Context)
 }

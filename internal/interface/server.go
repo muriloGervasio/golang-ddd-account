@@ -1,4 +1,4 @@
-package infrastructure
+package interfaces
 
 import "github.com/gin-gonic/gin"
 
@@ -14,15 +14,15 @@ func (server *Server) Run() {
 
 	for _, route := range Routes {
 		switch route.Method {
-		case "GET":
+		case GET:
 			r.GET(route.Path, route.Handler)
-		case "POST":
+		case POST:
 			r.POST(route.Path, route.Handler)
-		case "PUT":
+		case PUT:
 			r.PUT(route.Path, route.Handler)
-		case "DELETE":
+		case DELETE:
 			r.DELETE(route.Path, route.Handler)
-		case "PATCH":
+		case PATCH:
 			r.PATCH(route.Path, route.Handler)
 		}
 	}
